@@ -1,0 +1,265 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED306A2114E22FD500238D1C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED306A2014E22FD500238D1C /* UIKit.framework */; };
+		ED306A2314E22FD500238D1C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED306A2214E22FD500238D1C /* Foundation.framework */; };
+		ED306A2514E22FD500238D1C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED306A2414E22FD500238D1C /* CoreGraphics.framework */; };
+		ED306A2B14E22FD500238D1C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED306A2914E22FD500238D1C /* InfoPlist.strings */; };
+		ED306A2D14E22FD500238D1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED306A2C14E22FD500238D1C /* main.m */; };
+		ED306A3114E22FD500238D1C /* MBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED306A3014E22FD500238D1C /* MBAppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		ED306A1C14E22FD500238D1C /* custom-popover-background.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "custom-popover-background.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED306A2014E22FD500238D1C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		ED306A2214E22FD500238D1C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ED306A2414E22FD500238D1C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		ED306A2814E22FD500238D1C /* custom-popover-background-Info.plist */ = {isa = PBXFileReference; path = "custom-popover-background-Info.plist"; sourceTree = "<group>"; };
+		ED306A2A14E22FD500238D1C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ED306A2C14E22FD500238D1C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ED306A2E14E22FD500238D1C /* custom-popover-background-Prefix.pch */ = {isa = PBXFileReference; path = "custom-popover-background-Prefix.pch"; sourceTree = "<group>"; };
+		ED306A2F14E22FD500238D1C /* MBAppDelegate.h */ = {isa = PBXFileReference; path = MBAppDelegate.h; sourceTree = "<group>"; };
+		ED306A3014E22FD500238D1C /* MBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBAppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED306A1914E22FD500238D1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED306A2114E22FD500238D1C /* UIKit.framework in Frameworks */,
+				ED306A2314E22FD500238D1C /* Foundation.framework in Frameworks */,
+				ED306A2514E22FD500238D1C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED306A1114E22FD500238D1C = {
+			isa = PBXGroup;
+			children = (
+				ED306A2614E22FD500238D1C /* custom-popover-background */,
+				ED306A1F14E22FD500238D1C /* Frameworks */,
+				ED306A1D14E22FD500238D1C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ED306A1D14E22FD500238D1C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED306A1C14E22FD500238D1C /* custom-popover-background.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED306A1F14E22FD500238D1C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED306A2014E22FD500238D1C /* UIKit.framework */,
+				ED306A2214E22FD500238D1C /* Foundation.framework */,
+				ED306A2414E22FD500238D1C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED306A2614E22FD500238D1C /* custom-popover-background */ = {
+			isa = PBXGroup;
+			children = (
+				ED306A2F14E22FD500238D1C /* MBAppDelegate.h */,
+				ED306A3014E22FD500238D1C /* MBAppDelegate.m */,
+				ED306A2714E22FD500238D1C /* Supporting Files */,
+			);
+			path = "custom-popover-background";
+			sourceTree = "<group>";
+		};
+		ED306A2714E22FD500238D1C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED306A2814E22FD500238D1C /* custom-popover-background-Info.plist */,
+				ED306A2914E22FD500238D1C /* InfoPlist.strings */,
+				ED306A2C14E22FD500238D1C /* main.m */,
+				ED306A2E14E22FD500238D1C /* custom-popover-background-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED306A1B14E22FD500238D1C /* custom-popover-background */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED306A3414E22FD500238D1C /* Build configuration list for PBXNativeTarget "custom-popover-background" */;
+			buildPhases = (
+				ED306A1814E22FD500238D1C /* Sources */,
+				ED306A1914E22FD500238D1C /* Frameworks */,
+				ED306A1A14E22FD500238D1C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "custom-popover-background";
+			productName = "custom-popover-background";
+			productReference = ED306A1C14E22FD500238D1C /* custom-popover-background.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED306A1314E22FD500238D1C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = ED306A1614E22FD500238D1C /* Build configuration list for PBXProject "custom-popover-background" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ED306A1114E22FD500238D1C;
+			productRefGroup = ED306A1D14E22FD500238D1C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED306A1B14E22FD500238D1C /* custom-popover-background */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED306A1A14E22FD500238D1C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED306A2B14E22FD500238D1C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED306A1814E22FD500238D1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED306A2D14E22FD500238D1C /* main.m in Sources */,
+				ED306A3114E22FD500238D1C /* MBAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ED306A2914E22FD500238D1C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED306A2A14E22FD500238D1C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ED306A3214E22FD500238D1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ED306A3314E22FD500238D1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED306A3514E22FD500238D1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "custom-popover-background/custom-popover-background-Prefix.pch";
+				INFOPLIST_FILE = "custom-popover-background/custom-popover-background-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		ED306A3614E22FD500238D1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "custom-popover-background/custom-popover-background-Prefix.pch";
+				INFOPLIST_FILE = "custom-popover-background/custom-popover-background-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED306A1614E22FD500238D1C /* Build configuration list for PBXProject "custom-popover-background" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED306A3214E22FD500238D1C /* Debug */,
+				ED306A3314E22FD500238D1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED306A3414E22FD500238D1C /* Build configuration list for PBXNativeTarget "custom-popover-background" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED306A3514E22FD500238D1C /* Debug */,
+				ED306A3614E22FD500238D1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED306A1314E22FD500238D1C /* Project object */;
+}
