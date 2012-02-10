@@ -13,6 +13,27 @@
 		ED306A2B14E22FD500238D1C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED306A2914E22FD500238D1C /* InfoPlist.strings */; };
 		ED306A2D14E22FD500238D1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED306A2C14E22FD500238D1C /* main.m */; };
 		ED306A3114E22FD500238D1C /* MBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED306A3014E22FD500238D1C /* MBAppDelegate.m */; };
+		ED306A3814E2300E00238D1C /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED306A3714E2300E00238D1C /* MainStoryboard_iPhone.storyboard */; };
+		ED306A3A14E2303200238D1C /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED306A3914E2303200238D1C /* MainStoryboard_iPad.storyboard */; };
+		ED306A3E14E2348600238D1C /* navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = ED306A3C14E2348600238D1C /* navbar.png */; };
+		ED306A3F14E2348600238D1C /* navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED306A3D14E2348600238D1C /* navbar@2x.png */; };
+		ED306A4214E2353400238D1C /* MBRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED306A4114E2353400238D1C /* MBRootViewController.m */; };
+		EDBFC85714E2910C003F69BB /* popover-background-gray.png in Resources */ = {isa = PBXBuildFile; fileRef = EDBFC84B14E2910B003F69BB /* popover-background-gray.png */; };
+		EDBFC85814E2910C003F69BB /* popover-background-gray-red.png in Resources */ = {isa = PBXBuildFile; fileRef = EDBFC84C14E2910B003F69BB /* popover-background-gray-red.png */; };
+		EDBFC85914E2910C003F69BB /* popover-pin-green.png in Resources */ = {isa = PBXBuildFile; fileRef = EDBFC84D14E2910B003F69BB /* popover-pin-green.png */; };
+		EDBFC85A14E2910C003F69BB /* popover-pin-red.png in Resources */ = {isa = PBXBuildFile; fileRef = EDBFC84E14E2910B003F69BB /* popover-pin-red.png */; };
+		EDBFC85B14E2910C003F69BB /* popover-pin-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = EDBFC84F14E2910B003F69BB /* popover-pin-blue.png */; };
+		EDBFC85C14E2910C003F69BB /* popover-callout-dotted-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = EDBFC85014E2910B003F69BB /* popover-callout-dotted-blue.png */; };
+		EDBFC85D14E2910C003F69BB /* popover-arrow-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = EDBFC85114E2910B003F69BB /* popover-arrow-blue.png */; };
+		EDBFC85E14E2910C003F69BB /* popover-arrow-green.png in Resources */ = {isa = PBXBuildFile; fileRef = EDBFC85214E2910B003F69BB /* popover-arrow-green.png */; };
+		EDBFC85F14E2910C003F69BB /* popover-background-green.png in Resources */ = {isa = PBXBuildFile; fileRef = EDBFC85314E2910B003F69BB /* popover-background-green.png */; };
+		EDBFC86014E2910C003F69BB /* popover-background-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = EDBFC85414E2910B003F69BB /* popover-background-blue.png */; };
+		EDBFC86114E2910C003F69BB /* popover-arrow-red.png in Resources */ = {isa = PBXBuildFile; fileRef = EDBFC85514E2910B003F69BB /* popover-arrow-red.png */; };
+		EDBFC86214E2910C003F69BB /* popover-background-red.png in Resources */ = {isa = PBXBuildFile; fileRef = EDBFC85614E2910B003F69BB /* popover-background-red.png */; };
+		EDBFC86714E29155003F69BB /* MBPopoverBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBFC86614E29155003F69BB /* MBPopoverBackgroundView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EDBFC86B14E291B4003F69BB /* MBPopoverBackgroundViewRed.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBFC86A14E291B4003F69BB /* MBPopoverBackgroundViewRed.m */; };
+		EDBFC86E14E291CF003F69BB /* MBPopoverBackgroundViewGreen.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBFC86D14E291CF003F69BB /* MBPopoverBackgroundViewGreen.m */; };
+		EDBFC87114E291E3003F69BB /* MBPopoverBackgroundViewBlue.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBFC87014E291E3003F69BB /* MBPopoverBackgroundViewBlue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +41,38 @@
 		ED306A2014E22FD500238D1C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ED306A2214E22FD500238D1C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ED306A2414E22FD500238D1C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		ED306A2814E22FD500238D1C /* custom-popover-background-Info.plist */ = {isa = PBXFileReference; path = "custom-popover-background-Info.plist"; sourceTree = "<group>"; };
+		ED306A2814E22FD500238D1C /* custom-popover-background-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "custom-popover-background-Info.plist"; sourceTree = "<group>"; };
 		ED306A2A14E22FD500238D1C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ED306A2C14E22FD500238D1C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		ED306A2E14E22FD500238D1C /* custom-popover-background-Prefix.pch */ = {isa = PBXFileReference; path = "custom-popover-background-Prefix.pch"; sourceTree = "<group>"; };
-		ED306A2F14E22FD500238D1C /* MBAppDelegate.h */ = {isa = PBXFileReference; path = MBAppDelegate.h; sourceTree = "<group>"; };
+		ED306A2E14E22FD500238D1C /* custom-popover-background-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "custom-popover-background-Prefix.pch"; sourceTree = "<group>"; };
+		ED306A2F14E22FD500238D1C /* MBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBAppDelegate.h; sourceTree = "<group>"; };
 		ED306A3014E22FD500238D1C /* MBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBAppDelegate.m; sourceTree = "<group>"; };
+		ED306A3714E2300E00238D1C /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		ED306A3914E2303200238D1C /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		ED306A3C14E2348600238D1C /* navbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbar.png; sourceTree = "<group>"; };
+		ED306A3D14E2348600238D1C /* navbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar@2x.png"; sourceTree = "<group>"; };
+		ED306A4014E2353400238D1C /* MBRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBRootViewController.h; sourceTree = "<group>"; };
+		ED306A4114E2353400238D1C /* MBRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBRootViewController.m; sourceTree = "<group>"; };
+		EDBFC84B14E2910B003F69BB /* popover-background-gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popover-background-gray.png"; sourceTree = "<group>"; };
+		EDBFC84C14E2910B003F69BB /* popover-background-gray-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popover-background-gray-red.png"; sourceTree = "<group>"; };
+		EDBFC84D14E2910B003F69BB /* popover-pin-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popover-pin-green.png"; sourceTree = "<group>"; };
+		EDBFC84E14E2910B003F69BB /* popover-pin-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popover-pin-red.png"; sourceTree = "<group>"; };
+		EDBFC84F14E2910B003F69BB /* popover-pin-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popover-pin-blue.png"; sourceTree = "<group>"; };
+		EDBFC85014E2910B003F69BB /* popover-callout-dotted-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popover-callout-dotted-blue.png"; sourceTree = "<group>"; };
+		EDBFC85114E2910B003F69BB /* popover-arrow-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popover-arrow-blue.png"; sourceTree = "<group>"; };
+		EDBFC85214E2910B003F69BB /* popover-arrow-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popover-arrow-green.png"; sourceTree = "<group>"; };
+		EDBFC85314E2910B003F69BB /* popover-background-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popover-background-green.png"; sourceTree = "<group>"; };
+		EDBFC85414E2910B003F69BB /* popover-background-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popover-background-blue.png"; sourceTree = "<group>"; };
+		EDBFC85514E2910B003F69BB /* popover-arrow-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popover-arrow-red.png"; sourceTree = "<group>"; };
+		EDBFC85614E2910B003F69BB /* popover-background-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popover-background-red.png"; sourceTree = "<group>"; };
+		EDBFC86514E29155003F69BB /* MBPopoverBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBPopoverBackgroundView.h; sourceTree = "<group>"; };
+		EDBFC86614E29155003F69BB /* MBPopoverBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBPopoverBackgroundView.m; sourceTree = "<group>"; };
+		EDBFC86914E291B4003F69BB /* MBPopoverBackgroundViewRed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBPopoverBackgroundViewRed.h; sourceTree = "<group>"; };
+		EDBFC86A14E291B4003F69BB /* MBPopoverBackgroundViewRed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBPopoverBackgroundViewRed.m; sourceTree = "<group>"; };
+		EDBFC86C14E291CF003F69BB /* MBPopoverBackgroundViewGreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBPopoverBackgroundViewGreen.h; sourceTree = "<group>"; };
+		EDBFC86D14E291CF003F69BB /* MBPopoverBackgroundViewGreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBPopoverBackgroundViewGreen.m; sourceTree = "<group>"; };
+		EDBFC86F14E291E3003F69BB /* MBPopoverBackgroundViewBlue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBPopoverBackgroundViewBlue.h; sourceTree = "<group>"; };
+		EDBFC87014E291E3003F69BB /* MBPopoverBackgroundViewBlue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBPopoverBackgroundViewBlue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,9 +119,15 @@
 		ED306A2614E22FD500238D1C /* custom-popover-background */ = {
 			isa = PBXGroup;
 			children = (
+				EDBFC86814E2918F003F69BB /* Custom Popover Backgrounds */,
+				EDBFC86414E29155003F69BB /* MBPopoverBackgroundView */,
+				ED306A3914E2303200238D1C /* MainStoryboard_iPad.storyboard */,
+				ED306A3714E2300E00238D1C /* MainStoryboard_iPhone.storyboard */,
 				ED306A2F14E22FD500238D1C /* MBAppDelegate.h */,
 				ED306A3014E22FD500238D1C /* MBAppDelegate.m */,
 				ED306A2714E22FD500238D1C /* Supporting Files */,
+				ED306A4014E2353400238D1C /* MBRootViewController.h */,
+				ED306A4114E2353400238D1C /* MBRootViewController.m */,
 			);
 			path = "custom-popover-background";
 			sourceTree = "<group>";
@@ -82,12 +135,56 @@
 		ED306A2714E22FD500238D1C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				ED306A3B14E2348600238D1C /* Images */,
 				ED306A2814E22FD500238D1C /* custom-popover-background-Info.plist */,
 				ED306A2914E22FD500238D1C /* InfoPlist.strings */,
 				ED306A2C14E22FD500238D1C /* main.m */,
 				ED306A2E14E22FD500238D1C /* custom-popover-background-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ED306A3B14E2348600238D1C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				EDBFC84B14E2910B003F69BB /* popover-background-gray.png */,
+				EDBFC84C14E2910B003F69BB /* popover-background-gray-red.png */,
+				EDBFC84D14E2910B003F69BB /* popover-pin-green.png */,
+				EDBFC84E14E2910B003F69BB /* popover-pin-red.png */,
+				EDBFC84F14E2910B003F69BB /* popover-pin-blue.png */,
+				EDBFC85014E2910B003F69BB /* popover-callout-dotted-blue.png */,
+				EDBFC85114E2910B003F69BB /* popover-arrow-blue.png */,
+				EDBFC85214E2910B003F69BB /* popover-arrow-green.png */,
+				EDBFC85314E2910B003F69BB /* popover-background-green.png */,
+				EDBFC85414E2910B003F69BB /* popover-background-blue.png */,
+				EDBFC85514E2910B003F69BB /* popover-arrow-red.png */,
+				EDBFC85614E2910B003F69BB /* popover-background-red.png */,
+				ED306A3C14E2348600238D1C /* navbar.png */,
+				ED306A3D14E2348600238D1C /* navbar@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		EDBFC86414E29155003F69BB /* MBPopoverBackgroundView */ = {
+			isa = PBXGroup;
+			children = (
+				EDBFC86514E29155003F69BB /* MBPopoverBackgroundView.h */,
+				EDBFC86614E29155003F69BB /* MBPopoverBackgroundView.m */,
+			);
+			path = MBPopoverBackgroundView;
+			sourceTree = "<group>";
+		};
+		EDBFC86814E2918F003F69BB /* Custom Popover Backgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				EDBFC86914E291B4003F69BB /* MBPopoverBackgroundViewRed.h */,
+				EDBFC86A14E291B4003F69BB /* MBPopoverBackgroundViewRed.m */,
+				EDBFC86C14E291CF003F69BB /* MBPopoverBackgroundViewGreen.h */,
+				EDBFC86D14E291CF003F69BB /* MBPopoverBackgroundViewGreen.m */,
+				EDBFC86F14E291E3003F69BB /* MBPopoverBackgroundViewBlue.h */,
+				EDBFC87014E291E3003F69BB /* MBPopoverBackgroundViewBlue.m */,
+			);
+			name = "Custom Popover Backgrounds";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +238,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED306A2B14E22FD500238D1C /* InfoPlist.strings in Resources */,
+				ED306A3814E2300E00238D1C /* MainStoryboard_iPhone.storyboard in Resources */,
+				ED306A3A14E2303200238D1C /* MainStoryboard_iPad.storyboard in Resources */,
+				ED306A3E14E2348600238D1C /* navbar.png in Resources */,
+				ED306A3F14E2348600238D1C /* navbar@2x.png in Resources */,
+				EDBFC85714E2910C003F69BB /* popover-background-gray.png in Resources */,
+				EDBFC85814E2910C003F69BB /* popover-background-gray-red.png in Resources */,
+				EDBFC85914E2910C003F69BB /* popover-pin-green.png in Resources */,
+				EDBFC85A14E2910C003F69BB /* popover-pin-red.png in Resources */,
+				EDBFC85B14E2910C003F69BB /* popover-pin-blue.png in Resources */,
+				EDBFC85C14E2910C003F69BB /* popover-callout-dotted-blue.png in Resources */,
+				EDBFC85D14E2910C003F69BB /* popover-arrow-blue.png in Resources */,
+				EDBFC85E14E2910C003F69BB /* popover-arrow-green.png in Resources */,
+				EDBFC85F14E2910C003F69BB /* popover-background-green.png in Resources */,
+				EDBFC86014E2910C003F69BB /* popover-background-blue.png in Resources */,
+				EDBFC86114E2910C003F69BB /* popover-arrow-red.png in Resources */,
+				EDBFC86214E2910C003F69BB /* popover-background-red.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +266,11 @@
 			files = (
 				ED306A2D14E22FD500238D1C /* main.m in Sources */,
 				ED306A3114E22FD500238D1C /* MBAppDelegate.m in Sources */,
+				ED306A4214E2353400238D1C /* MBRootViewController.m in Sources */,
+				EDBFC86714E29155003F69BB /* MBPopoverBackgroundView.m in Sources */,
+				EDBFC86B14E291B4003F69BB /* MBPopoverBackgroundViewRed.m in Sources */,
+				EDBFC86E14E291CF003F69BB /* MBPopoverBackgroundViewGreen.m in Sources */,
+				EDBFC87114E291E3003F69BB /* MBPopoverBackgroundViewBlue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +376,7 @@
 				ED306A3614E22FD500238D1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,6 +7,10 @@
 //
 
 #import "MBAppDelegate.h"
+#import "MBPopoverBackgroundView.h"
+#import "MBPopoverBackgroundViewRed.h"
+#import "MBPopoverBackgroundViewGreen.h"
+#import "MBPopoverBackgroundViewBlue.h"
 
 @implementation MBAppDelegate
 
@@ -14,7 +18,36 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    // block this line, it overrides window loaded from storyboard
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    // set navigation bar appearance
+    [[UINavigationBar appearance] setTintColor: [UIColor colorWithRed:0.481 green:0.065 blue:0.081 alpha:1.000]];
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
+    
+    // set appearances for popovers
+    [MBPopoverBackgroundView initialize];
+    
+    // red with arrow
+    [MBPopoverBackgroundViewRed setArrowImageName:@"popover-arrow-red.png"];
+    [MBPopoverBackgroundViewRed setBackgroundImageName:@"popover-background-red.png"];
+    [MBPopoverBackgroundViewRed setBackgroundImageCapInsets:UIEdgeInsetsMake(12, 12, 12, 12)];
+    [MBPopoverBackgroundViewRed setContentViewInsets:UIEdgeInsetsMake(10, 10, 10, 10)]; 
+    
+    // green with blue pin
+    [MBPopoverBackgroundViewGreen setArrowImageName:@"popover-pin-blue.png"];
+    [MBPopoverBackgroundViewGreen setBackgroundImageName:@"popover-background-green.png"];
+    [MBPopoverBackgroundViewGreen setBackgroundImageCapInsets:UIEdgeInsetsMake(12, 12, 12, 12)];
+    [MBPopoverBackgroundViewGreen setContentViewInsets:UIEdgeInsetsMake(30, 20, 20, 10)]; 
+
+    // blue with dottet callour
+    [MBPopoverBackgroundViewBlue setArrowImageName:@"popover-callout-dotted-blue.png"];
+    [MBPopoverBackgroundViewBlue setBackgroundImageName:@"popover-background-blue.png"];
+    [MBPopoverBackgroundViewBlue setBackgroundImageCapInsets:UIEdgeInsetsMake(12, 12, 12, 12)];
+    [MBPopoverBackgroundViewBlue setContentViewInsets:UIEdgeInsetsMake(20, 10, 20, 10)];
+    
+    
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
@@ -58,6 +91,8 @@
      Save data if appropriate.
      See also applicationDidEnterBackground:.
      */
+    
+    [MBPopoverBackgroundView cleanup];
 }
 
 @end
