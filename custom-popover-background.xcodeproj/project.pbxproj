@@ -30,7 +30,7 @@
 		EDBFC86014E2910C003F69BB /* popover-background-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = EDBFC85414E2910B003F69BB /* popover-background-blue.png */; };
 		EDBFC86114E2910C003F69BB /* popover-arrow-red.png in Resources */ = {isa = PBXBuildFile; fileRef = EDBFC85514E2910B003F69BB /* popover-arrow-red.png */; };
 		EDBFC86214E2910C003F69BB /* popover-background-red.png in Resources */ = {isa = PBXBuildFile; fileRef = EDBFC85614E2910B003F69BB /* popover-background-red.png */; };
-		EDBFC86714E29155003F69BB /* MBPopoverBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBFC86614E29155003F69BB /* MBPopoverBackgroundView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EDBFC86714E29155003F69BB /* MBPopoverBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBFC86614E29155003F69BB /* MBPopoverBackgroundView.m */; };
 		EDBFC86B14E291B4003F69BB /* MBPopoverBackgroundViewRed.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBFC86A14E291B4003F69BB /* MBPopoverBackgroundViewRed.m */; };
 		EDBFC86E14E291CF003F69BB /* MBPopoverBackgroundViewGreen.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBFC86D14E291CF003F69BB /* MBPopoverBackgroundViewGreen.m */; };
 		EDBFC87114E291E3003F69BB /* MBPopoverBackgroundViewBlue.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBFC87014E291E3003F69BB /* MBPopoverBackgroundViewBlue.m */; };

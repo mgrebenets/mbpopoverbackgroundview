@@ -37,7 +37,7 @@
 @implementation MBPopoverBackgroundView
 
 // static
-static NSMutableDictionary *s_customValuesDic = nil;
+static __strong NSMutableDictionary *s_customValuesDic = nil;
 
 // properties
 @synthesize arrowDirection = _arrowDirection;
@@ -53,9 +53,7 @@ static NSMutableDictionary *s_customValuesDic = nil;
     
     // init static dictionary to store custom values
     if (!s_customValuesDic) {
-        s_customValuesDic = [[NSMutableDictionary dictionaryWithCapacity:4] retain];
-        // !!!: when using arc, have to remove 'retain'
-        // but when does arc autorelease this static dictionary?
+        s_customValuesDic = [NSMutableDictionary dictionaryWithCapacity:4];
     }
     
     
@@ -63,10 +61,7 @@ static NSMutableDictionary *s_customValuesDic = nil;
 
 // cleanup
 + (void)cleanup {
-    if (s_customValuesDic) {
-        [s_customValuesDic release];
-        s_customValuesDic = nil;
-    }
+    s_customValuesDic = nil;
 }
 
 
@@ -177,10 +172,10 @@ static NSMutableDictionary *s_customValuesDic = nil;
     
     UIEdgeInsets bgCapInsets = self.class.backgroundImageCapInsets;
     UIImage *bgImage = [[UIImage imageNamed:self.class.backgroundImageName] resizableImageWithCapInsets:bgCapInsets];
-    self.backgroundImageView = [[[UIImageView alloc] initWithImage:bgImage] autorelease];
+    self.backgroundImageView = [[UIImageView alloc] initWithImage:bgImage];
     
     UIImage *arrowImage = [UIImage imageNamed:self.class.arrowImageName];
-    self.arrowImageView = [[[UIImageView alloc] initWithImage:arrowImage] autorelease];
+    self.arrowImageView = [[UIImageView alloc] initWithImage:arrowImage];
     
     [self addSubview:_backgroundImageView];
     [self addSubview:_arrowImageView];
@@ -204,8 +199,6 @@ static NSMutableDictionary *s_customValuesDic = nil;
     [self removeObservers];    
     self.backgroundImageView = nil;
     self.arrowImageView = nil;
-    
-    [super dealloc]; 
 }
 
 #pragma mark - KVO
