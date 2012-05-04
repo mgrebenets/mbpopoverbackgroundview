@@ -2,3 +2,5 @@ MBPopoverBackgroundView
 iOS: Custom UIPopoverController background view
 MBPopoverBackgroundView is subclass of UIPopoverBackgroundView with methods for flexible customization
 
+... more details later, so far refer to the sample project, it's mostly self-explanatory
+
