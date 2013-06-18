@@ -36,32 +36,26 @@
 
 @implementation MBPopoverBackgroundView
 
-// static
-static __strong NSMutableDictionary *s_customValuesDic = nil;
-
-// properties
+// MUST have these two, or it'll crash!
 @synthesize arrowDirection = _arrowDirection;
 @synthesize arrowOffset = _arrowOffset;
-@synthesize backgroundImageView = _backgroundImageView;
-@synthesize arrowImageView = _arrowImageView;
 
 #pragma mark - Class Initialize and Cleanup
 
+// static
+__strong static NSMutableDictionary *CustomValuesDic = nil;
+
 // initialize
 + (void)initialize {
-    // class specific initialization
-    
-    // init static dictionary to store custom values
-    if (!s_customValuesDic) {
-        s_customValuesDic = [NSMutableDictionary dictionaryWithCapacity:4];
-    }
-    
-    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        CustomValuesDic = [NSMutableDictionary dictionaryWithCapacity:4];
+    });
 }
 
 // cleanup
 + (void)cleanup {
-    s_customValuesDic = nil;
+    CustomValuesDic = nil;
 }
 
 
@@ -74,13 +68,13 @@ static __strong NSMutableDictionary *s_customValuesDic = nil;
 // get
 + (id)customValueForKey:(NSString *)key {
     // Note: override/modify this method to use different storage
-    return [s_customValuesDic valueForKey:key];
+    return [CustomValuesDic valueForKey:key];
 }
 
 // set
 + (void)setCustomValue:(id)value forKey:(NSString *)key {
     // Note: override/modify this method to use different storage
-    [s_customValuesDic setObject:value forKey:key];
+    CustomValuesDic[key] = value;
 }
 
 #pragma mark - Arrow and Background Image Customization
@@ -197,8 +191,6 @@ static __strong NSMutableDictionary *s_customValuesDic = nil;
 
 - (void)dealloc {
     [self removeObservers];    
-    self.backgroundImageView = nil;
-    self.arrowImageView = nil;
 }
 
 #pragma mark - KVO
@@ -232,15 +224,15 @@ static __strong NSMutableDictionary *s_customValuesDic = nil;
     CGRect bgRect = self.bounds;
     // use arrow direction to find out which side to "cut"
     // first, account for arrow height or width
-    BOOL cutWidth = (_arrowDirection == UIPopoverArrowDirectionLeft || _arrowDirection == UIPopoverArrowDirectionRight);
+    BOOL cutWidth = (self.arrowDirection == UIPopoverArrowDirectionLeft || self.arrowDirection == UIPopoverArrowDirectionRight);
     bgRect.size.width -= cutWidth * [self.class arrowHeight];
-    BOOL cutHeight = (_arrowDirection == UIPopoverArrowDirectionUp || _arrowDirection == UIPopoverArrowDirectionDown);
+    BOOL cutHeight = (self.arrowDirection == UIPopoverArrowDirectionUp || self.arrowDirection == UIPopoverArrowDirectionDown);
     bgRect.size.height -= cutHeight * [self.class arrowHeight];
 
     // next, adjust the origin, needed only if arrow points down or left
-    if (_arrowDirection == UIPopoverArrowDirectionUp) {
+    if (self.arrowDirection == UIPopoverArrowDirectionUp) {
         bgRect.origin.y += [self.class arrowHeight];    
-    } else if (_arrowDirection == UIPopoverArrowDirectionLeft) {
+    } else if (self.arrowDirection == UIPopoverArrowDirectionLeft) {
         bgRect.origin.x += [self.class arrowHeight];
     }
     
@@ -256,12 +248,12 @@ static __strong NSMutableDictionary *s_customValuesDic = nil;
     // note: first apply transformation, then calculate arrow frame origin
     CGRect arrowRect = CGRectZero;
     UIEdgeInsets bgCapInsets = [self.class backgroundImageCapInsets];
-    switch (_arrowDirection) {
+    switch (self.arrowDirection) {
         case UIPopoverArrowDirectionUp:
             _arrowImageView.transform = CGAffineTransformMakeScale(1, 1);   // original transformation (identity matrix)            
             // get the frame (not bounds! because bounds ignore transformations)
             arrowRect = _arrowImageView.frame;  // get frame after (!) transformation
-            arrowRect.origin.x = self.bounds.size.width / 2 + _arrowOffset - arrowRect.size.width / 2;
+            arrowRect.origin.x = self.bounds.size.width / 2 + self.arrowOffset - arrowRect.size.width / 2;
             arrowRect.origin.y = 0;
             // popovers are usually not scaled down by x, so no need to account for that now
             break;
@@ -269,7 +261,7 @@ static __strong NSMutableDictionary *s_customValuesDic = nil;
             _arrowImageView.transform = CGAffineTransformMakeScale(1, -1);  // flip vertically 
             // get the frame (not bounds! because bounds ignore transformations)
             arrowRect = _arrowImageView.frame;  // get frame after (!) transformation
-            arrowRect.origin.x = self.bounds.size.width / 2 + _arrowOffset - arrowRect.size.width / 2;            
+            arrowRect.origin.x = self.bounds.size.width / 2 + self.arrowOffset - arrowRect.size.width / 2;            
             arrowRect.origin.y = self.bounds.size.height - arrowRect.size.height;                           
             // popovers are usually not scaled down by x, so no need to account for that now            
             break;
@@ -278,7 +270,7 @@ static __strong NSMutableDictionary *s_customValuesDic = nil;
             // get the frame (not bounds! because bounds ignore transformations)
             arrowRect = _arrowImageView.frame;  // get frame after (!) transformation
             arrowRect.origin.x = 0;      
-            arrowRect.origin.y = self.bounds.size.height / 2 + _arrowOffset - arrowRect.size.height / 2;    
+            arrowRect.origin.y = self.bounds.size.height / 2 + self.arrowOffset - arrowRect.size.height / 2;    
             // final adjustment - check that the arrow is not left below popover (happens when keyboard is shown)
             // and account for background image cap insets to make it look good for rounded corners
             arrowRect.origin.y = fminf(self.bounds.size.height - arrowRect.size.height - bgCapInsets.bottom, arrowRect.origin.y);
@@ -290,7 +282,7 @@ static __strong NSMutableDictionary *s_customValuesDic = nil;
             // get the frame (not bounds! because bounds ignore transformations)
             arrowRect = _arrowImageView.frame;  // get frame after (!) transformation
             arrowRect.origin.x = self.bounds.size.width - arrowRect.size.width;      
-            arrowRect.origin.y = self.bounds.size.height / 2 + _arrowOffset - arrowRect.size.height / 2;   
+            arrowRect.origin.y = self.bounds.size.height / 2 + self.arrowOffset - arrowRect.size.height / 2;   
             // final adjustment - check that the arrow is not left below popover (happens when keyboard is shown)            
             arrowRect.origin.y = fminf(self.bounds.size.height - arrowRect.size.height  - bgCapInsets.bottom, arrowRect.origin.y);
             // also, make sure it's not above popover and fits right background cap instes
