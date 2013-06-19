@@ -1,9 +1,9 @@
 //
 //  MBPopoverBackgroundView.m
-//  monkeybars
+//  i4nApps
 //
 //  Created by Grebenets Maksym on 8/02/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 i4nApps. All rights reserved.
 //
 
 #import "MBPopoverBackgroundView.h"
