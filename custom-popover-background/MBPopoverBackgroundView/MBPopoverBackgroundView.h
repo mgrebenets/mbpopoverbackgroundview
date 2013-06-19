@@ -46,7 +46,7 @@
 
 /**
  * Set your custom background image cap insets. Used for stretching background image.
- * @param capInset cap insets used for stretching background image
+ * @param capInsets cap insets used for stretching background image
  */
 + (void)setBackgroundImageCapInsets:(UIEdgeInsets)capInsets;
 
